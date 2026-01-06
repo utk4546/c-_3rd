@@ -1,4 +1,5 @@
 // 4. Sort an array of 0s, 1s and 2s (Dutch National Flag Problem
+// 4. Sort an array of 0s, 1s and 2s (Dutch National Flag Problem
 #include <iostream>
 using namespace std;
 
@@ -22,18 +23,27 @@ void sort012(int arr[], int n) {
 }
 
 int main() {
-    // int n ;
-    int arr[]={0,2,1,0,2,1};
-    int n =6;
-    // cout<<"enter the size of arrray";
-    // cin>>n;
-    // cout<<"enter the elements of array (in form of 0,1,2)"<<endl;
-    // for(int i=0;i<n;i++){
-    //     cin>>arr[i];
-    // }
+    int n ;
+    cout<<"size of array = ";
+    cin>>n;
+    cout<<"elements of array"<<endl;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        int x;
+        cin >> x;
+
+        if (x == 0 || x == 1 || x == 2) {
+            arr[i] = x;
+        } else {
+            cout << "Invalid input! Enter only 0, 1 or 2\n";
+            i--; // same index pe dobara input
+        }
+    }
+    
 
     sort012(arr, n);
     cout<<"sorted array"<<endl;
     for (int i = 0; i < n; i++)
         cout << arr[i] << " ";
 }
+
