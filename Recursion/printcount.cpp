@@ -11,6 +11,7 @@ int main(){
     int n;
     cout<<"enter the value";
     cin>>n;
-    int utk=print(n);
-    cout<<utk;
+    int s=print(n);
+    cout<<s;
+
 }
